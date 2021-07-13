@@ -12,5 +12,8 @@ const product = require('./routes/product');
 
 app.use('/api/product', product)
 
+//database connection
+const mongodb_connect = require('./database');
+const db = mongodb_connect.connect();
 
 module.exports = app;
