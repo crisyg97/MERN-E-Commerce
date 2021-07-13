@@ -1,7 +1,16 @@
 const express = require('express');
-const app = express();
+      dotenv = require('dotenv');
+      app = express();
 
-const dotenv = require('dotenv');
+//middleware
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 dotenv.config({ path: 'backend/config/config.env' });
+
+//routes
+const product = require('./routes/product');
+
+app.use('/api/product', product)
+
 
 module.exports = app;

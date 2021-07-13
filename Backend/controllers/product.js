@@ -1,7 +1,7 @@
 
 const ctrl = {}
 
-ctrl.get = (req, res, next) => {
+ctrl.index = (req, res, next) => {
     res.status(200).json({
         message: "get all product "
     })
