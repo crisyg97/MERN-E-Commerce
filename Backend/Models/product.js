@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+var categories = ['electronics','cameras','laptop','accessories','headphones','food','books','clothes/shoes','beauty/health','sports','outdoor','home'];
 
 var productSchema = new Schema ({
     name:{
@@ -38,22 +41,21 @@ var productSchema = new Schema ({
         required: [true, 'Please select category for this product'],
         enum: {
             values: [
-                'electronics',
-                'cameras',
-                'laptop',
-                'accessories',
-                'headphones',
-                'food',
-                'books',
-                'clothes/shoes',
-                'beauty/health',
-                'sports',
-                'outdoor',
-                'home'
+              'Electronics',
+              'Cameras',
+              'Laptops',
+              'Accessories',
+              'Headphones',
+              'Food',
+              'Books',
+              'Clothes/Shoes',
+              'Beauty/Health',
+              'Sports',
+              'Outdoor',
+              'Home',
             ],
-            message: 'Please select correct category for product'
-        }
-    },
+            message: 'Please select correct category for product',
+          },    },
     stock: {
         type: Number,
         required: [true, 'Please enter product stock'],
