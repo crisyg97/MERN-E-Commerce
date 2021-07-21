@@ -37,6 +37,35 @@ ctrl.getByID = async (req, res, next) => {
     })
 }
 
+ctrl.update = async (req, res, next) => {
+    const id = req.params.product_id;
+    const body = req.body;
+    await productModel.findOne({_id:id}, (productDb,err) => {
+        if(err) {console.log(err)}
+        else
+            if(!user) {console.log('product not found')}
+            else{
+                productDb.name= body.name,
+                productDb.price= body.price,
+                productDb.description= body.description,
+                productDb.ratings= body.ratings,
+                productDb.image= body.image,
+                productDb.category= body.category,
+                productDb.stock= body.stock,
+                productDb.numOfRevews= body.numOfRevews,
+                productDb.reviews= body.reviews,
+                productDb.createdAt= body.createdAt
+            }
+            productDb.save((err) => {
+                if(err) {console.log(err)}
+                res.send({
+                    succes: true
+                });
+            })
+
+    })
+}
+
 ctrl.remove = async (req, res, next) => {
 
 }
