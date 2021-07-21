@@ -7,7 +7,7 @@ ctrl.index = async (req, res, next) => {
         res.send({
             product : product
         });       
-    })
+    });
 }
 
 ctrl.create = async (req, res, next) => {
@@ -38,7 +38,7 @@ ctrl.getByID = async (req, res, next) => {
 }
 
 ctrl.remove = async (req, res, next) => {
-    
+
 }
 
 module.exports = ctrl;
