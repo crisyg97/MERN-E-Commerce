@@ -85,6 +85,11 @@ var productSchema = new Schema ({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    status: {
+        type: String, 
+        required: true,
+        enum: ['ACTIVE', 'INACTIVE']
     }
 });
 

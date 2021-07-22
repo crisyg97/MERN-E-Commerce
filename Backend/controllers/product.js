@@ -67,7 +67,23 @@ ctrl.update = async (req, res, next) => {
 }
 
 ctrl.remove = async (req, res, next) => {
-
+    const id = req.params.product_id;
+    await productModel.findOne({_id:id}, (productDb,err) => {
+        if(err) {console.log(err)}
+        else
+            if(!productDb) {console.log('product not found')}
+            else{
+                productDb.status = 'INACTIVE';
+                
+                productDb.save((err) => {
+                    if(err) {console.log(err)}
+                    res.send({
+                        success: true
+                    });
+                })
+                
+            }
+    })
 }
 
 module.exports = ctrl;
