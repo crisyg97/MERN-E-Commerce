@@ -37,11 +37,10 @@ var userSchema = new Schema({
             required: true
         }
     },
-    role: {
-        type: String,
-        required: true,
-        default: 'user'
-    },
+    roles: [{
+        type: Schema.Types.ObjectId,
+        ref: 'role',
+    }],,
     createAt: {
         type: Date,
         default: Date.now()
