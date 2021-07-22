@@ -10,9 +10,11 @@ app.use(morgan('dev'));
 dotenv.config({ path: 'backend/config/config.env' });
 
 //routes
+const auth = require('./routes/auth');
 const product = require('./routes/product');
 
-app.use('/api/product', product)
+app.use('/api/product', product);
+app.use('/api/auth', auth);
 
 //database connection
 const mongodb_connect = require('./database');
