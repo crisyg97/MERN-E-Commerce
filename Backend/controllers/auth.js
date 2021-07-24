@@ -48,21 +48,33 @@ ctrl.signup = async (req, res, next) => {
 
     newUser.save((err, user) => {
         if(err) {
-            res.send({
-                message: 'something went wrong'
-            });
+            res.status(400).json({message: 'something went wrong'});
         }
         if(user){
             const token = generateToken(user._id);
-            return res.json(token);
+            return res.status(201).json({token});
         }
     });
 
 
 }
 
-ctrl.signin = (req, res, next) => {
-
+ctrl.signin = async (req, res, next) => {
+    const body = req.body;
+    await userModel.findOne({email: body.email}).exec( async (err,userFound) => {
+        if(err) {return res.json({err})}
+        if(userFound) {
+            const comparationResult = await userModel.comparePassword(body.password, userFound.password);
+            if(comparationResult){
+                const token = generateToken(userFound._id);
+                return res.status(200).json({token});
+            }else{
+                return res.status(400).json({message: 'wrong password'})
+            }
+        }else{
+            return res.status(400).json({message: 'something went wrong'})
+        }
+    })
 }
 
 module.exports = ctrl;

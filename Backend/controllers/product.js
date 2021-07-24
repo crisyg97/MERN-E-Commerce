@@ -27,7 +27,7 @@ ctrl.create = async (req, res, next) => {
     const product = await productModel.create(newProduct); //create and save model
 }
 
-ctrl.getByID = async (req, res, next) => {
+ctrl.getById = async (req, res, next) => {
     const id = req.params.product_id;;
     await productModel.findById({_id:id}, (productDb,err) => {
         if(err) {console.log(err)}
