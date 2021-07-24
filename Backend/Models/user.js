@@ -40,11 +40,17 @@ var userSchema = new Schema({
     roles: [{
         type: Schema.Types.ObjectId,
         ref: 'role',
-    }],,
+    }],
     createAt: {
         type: Date,
         default: Date.now()
     }
 });
+
+
+userSchema.statics.encryptPassword = async (password) => {
+    const salt = await bcrypt.genSalt(10);
+    return bcrypt.hash(password, salt); 
+}
 
 module.exports = moongose.model('user' ,userSchema)
