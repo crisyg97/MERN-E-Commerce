@@ -2,7 +2,6 @@ const dotenv = require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
 const userModel = require('../models/user');
-const roleModel = require('../models/role');
 const index = {};
 
 index.verifyToken = async (req,res,next) => {
@@ -24,30 +23,5 @@ index.verifyToken = async (req,res,next) => {
     }
 };
 
-index.isModerator = async (res,req,next) => {
-    const user =  await userModel.findById(req.id);
-    const roles = await roleModel.find({ _id: {$in : user.roles } });
-
-    for(let i=0; i < roles.length; i++){
-        if(roles[i].name === "moderator"){
-            next();
-            return;
-        }
-    }
-    return res.status(403).json({message: "required role moderator"})
-};
-
-index.isAdmin = async (res,req,next) => {
-    const user =  await userModel.findById(req.id);
-    const roles = await roleModel.find({ _id: {$in : user.roles } });
-
-    for(let i =0; i < roles.length; i++){
-        if(roles[i].name === "admin"){
-            next();
-            return;
-        }
-    }
-    return res.status(403).json({message: "required role admin"})
-}
 
 module.exports = index;

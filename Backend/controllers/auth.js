@@ -33,8 +33,7 @@ ctrl.signup = async (req, res, next) => {
         email: body.email,
         password: hashPassw,
         avatar: body.avatar,
-        roles: body.roles,
-        createAt: body.createAt
+        roles: body.roles
     });
 
     //relationship roles with users

@@ -21,8 +21,7 @@ ctrl.create = async (req, res, next) => {
         category: body.category,
         stock: body.stock,
         numOfRevews: body.numOfRevews,
-        reviews: body.reviews,
-        createdAt: body.createdAt
+        reviews: body.reviews
     });
     newProduct.save((err,product) => {
         if(err) {res.status(400).json(err)}
@@ -63,8 +62,7 @@ ctrl.update = async (req, res, next) => {
                 productDb.category= body.category,
                 productDb.stock= body.stock,
                 productDb.numOfRevews= body.numOfRevews,
-                productDb.reviews= body.reviews,
-                productDb.createdAt= body.createdAt
+                productDb.reviews= body.reviews
             }
             productDb.save((err) => {
                 if(err) {return res.status(400).json({ message: 'something went wrong'})}
