@@ -1,0 +1,460 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Shop IT",
+		"_postman_id": "51d2d57a-3291-be6d-b0ec-070395365706",
+		"description": "Full e-commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "products",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:3000/api/product/",
+					"request": {
+						"url": "http://localhost:3000/api/product/",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "get all products"
+					},
+					"response": [
+						{
+							"id": "766aae7b-4079-43f7-bc76-11c0ee8a0db1",
+							"name": "http://localhost:3000/api/product/",
+							"originalRequest": {
+								"url": "http://localhost:3000/api/product/",
+								"method": "GET",
+								"header": [],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "connection",
+									"key": "connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "6212",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Sat, 24 Jul 2021 21:43:35 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"1844-Zb8GZQoBOlCSI9a5hP0uhCu/QJc\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "keep-alive",
+									"key": "keep-alive",
+									"value": "timeout=5",
+									"description": "Custom header"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "Express",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 427,
+							"body": "{\"product\":[{\"price\":45.89,\"ratings\":4.5,\"stock\":50,\"numOfRevews\":0,\"_id\":\"60fb840291fe7409e8092159\",\"name\":\"SanDisk Ultra 128GB SDXC UHS-I Memory Card up to 80MB/s\",\"description\":\"Ultra-fast cards (2) to take better pictures and Full HD videos (1) with your compact to mid-range point-and-shoot cameras and camcorders. With SanDisk Ultra SDXC UHS-I cards you’ll benefit from faster downloads, high capacity, and better performance to capture and store 128GB (5) of high quality pictures and Full HD video (1). Take advantage of ultra-fast read speeds of up to 80MB/s (3) to save time moving photos and videos from the card to your computer. From a leader in flash memory storage, SanDisk Ultra SDXC UHS-I cards are compatible with SDHC and SDXC digital devices, and come with a 10-year limited warranty (6).\",\"category\":\"Electronics\",\"reviews\":[],\"status\":\"ACTIVE\",\"image\":[],\"createdAt\":\"2021-07-24T03:07:46.140Z\",\"__v\":0},{\"price\":315,\"ratings\":1.65,\"stock\":0,\"numOfRevews\":0,\"_id\":\"60fb840291fe7409e809215a\",\"name\":\"CAN USB FD Adapter (GC-CAN-USB-FD)\",\"description\":\"Monitor a CAN network, write a CAN program and communicate with industrial, medical, automotive or other CAN based device. Connect CAN FD and CAN networks to a computer via USB with the CAN USB FD adapter.\",\"category\":\"Electronics\",\"reviews\":[],\"status\":\"ACTIVE\",\"image\":[],\"createdAt\":\"2021-07-24T03:07:46.146Z\",\"__v\":0},{\"price\":26.99,\"ratings\":3.5,\"stock\":1,\"numOfRevews\":0,\"_id\":\"60fb840291fe7409e809215b\",\"name\":\"CHARMOUNT Full Motion TV Wall Mount Swivel\",\"description\":\"CHARMOUNT TV MOUNT UNIVERSAL DESIGN - Has your TV been received? Tilted TV wall mount is for 26 - 55 TVs weight up to 88lbs 40 kg. Our tilt TV mount has a compatible faceplate that fits VESA 75X75mm (3x3). CHARMOUNT TV MOUNT UNIVERSAL DESIGN - Has your TV been received? Tilted TV wall mount is for 26 - 55 TVs weight up to 88lbs 40 kg. Our tilt TV mount has a compatible faceplate that fits VESA 75X75mm (3x3) CHARMOUNT TV MOUNT UNIVERSAL DESIGN - Has your TV been received? Tilted TV wall mount is for 26 - 55 TVs weight up to 88lbs 40 kg. Our tilt TV mount has a compatible faceplate that fits VESA 75X75mm (3x3).\",\"category\":\"Electronics\",\"reviews\":[],\"status\":\"ACTIVE\",\"image\":[],\"createdAt\":\"2021-07-24T03:07:46.148Z\",\"__v\":0},{\"price\":299,\"ratings\":4.5,\"stock\":11,\"numOfRevews\":0,\"_id\":\"60fb840291fe7409e809215c\",\"name\":\"Bose QuietComfort 35 II Wireless Bluetooth Headphones\",\"description\":\"What happens when you clear away the noisy distractions of the world? Concentration goes to the next level. You get deeper into your music, your work, or whatever you want to focus on. That’s the power of Bose QuietComfort 35 wireless headphones II. Put them on and get closer to what you’re most passionate about. And that’s just the beginning. QuietComfort 35 wireless headphones II are now enabled with Bose AR\",\"category\":\"Headphones\",\"reviews\":[],\"status\":\"ACTIVE\",\"image\":[],\"createdAt\":\"2021-07-24T03:07:46.149Z\",\"__v\":0},{\"price\":126.99,\"ratings\":4.8,\"stock\":122,\"numOfRevews\":0,\"_id\":\"60fb840291fe7409e809215d\",\"name\":\"Apple AirPods with Charging Case (Wired)\",\"description\":\"AirPods with Charging Case: More than 24 hours listening time, up to 18 hours talk time; AirPods (single charge): Up to 5 hours listening time, up to 3 hours talk time or 15 minutes in the case equals up to 3 hours listening time or up to 2 hours talk time.\",\"category\":\"Electronics\",\"reviews\":[],\"status\":\"ACTIVE\",\"image\":[],\"createdAt\":\"2021-07-24T03:07:46.150Z\",\"__v\":0},{\"price\":27.99,\"ratings\":4.1,\"stock\":1123,\"numOfRevews\":0,\"_id\":\"60fb840291fe7409e809215e\",\"name\":\"Cable Boom Microphone - Volume Control for Playstation PS4 or Xbox\",\"description\":\"DESIGN INFO - 3.5mm male to 2.5mm male audio cable adapter with Upgraded Flexible, Detachable Boom Mic which also enables rotary Volume Control and Mute Switch. SteelFlex Arm for perfect microphone positioning. INPUT COMPATIBILITY - Devices supporting 3.5mm audio output such as gaming PS4 / Xbox One controller, PC, Laptop, iPhone and Android Phone.\",\"category\":\"Accessories\",\"reviews\":[],\"status\":\"ACTIVE\",\"image\":[],\"createdAt\":\"2021-07-24T03:07:46.151Z\",\"__v\":0},{\"price\":496.95,\"ratings\":4.7,\"stock\":131,\"numOfRevews\":0,\"_id\":\"60fb840291fe7409e809215f\",\"name\":\"Nikon D3500 W/ AF-P DX NIKKOR 18-55mm f/3.5-5.6G VR Black\",\"description\":\"You don't need to be a photographer to know a great photo when you see one. And you don't need to be a photographer to take a great photo—you just need the D3500. It's as easy to use as a point-and-shoot, but it takes beautiful DSLR photos and videos that get noticed. It feels outstanding in your hands, sturdy and balanced with controls where you want them. It's compact, durable and versatile, ideal for travel. And it works seamlessly with compatible smartphones, making it easier than ever to share your great photos. Even if you've never picked up a DSLR camera, you can take beautiful pictures with D3500.\",\"category\":\"Cameras\",\"reviews\":[],\"status\":\"ACTIVE\",\"image\":[],\"createdAt\":\"2021-07-24T03:07:46.152Z\",\"__v\":0},{\"price\":949.99,\"ratings\":4.9,\"stock\":0,\"numOfRevews\":0,\"_id\":\"60fb840291fe7409e8092160\",\"name\":\"Apple MacBook Air (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray\",\"description\":\"Stunning 13.3-inch Retina display with True Tone technology, Backlit Magic Keyboard and Touch ID, Tenth-generation, Intel Core i3 processor, Intel Iris Plus Graphics, Fast SSD storage, 8GB of memory, Stereo speakers with wider stereo sound\",\"category\":\"Laptops\",\"reviews\":[],\"status\":\"ACTIVE\",\"image\":[],\"createdAt\":\"2021-07-24T03:07:46.153Z\",\"__v\":0},{\"price\":2.75,\"ratings\":5,\"stock\":500,\"numOfRevews\":0,\"_id\":\"60fb840291fe7409e8092161\",\"name\":\"Kauffman Orchards Homegrown McIntosh Apples\",\"description\":\"McIntosh is a pretty red/green apple with white flesh Homegrown in Kauffman's orchard in healthy Lancaster County soil McIntosh apples are famous for snacking, pies, salads, and applesauce Protected with soft, high-density foam for safe shipping to your door Not for sale to California, Oregon, or Washington due to state laws governing fresh produce\",\"category\":\"Food\",\"reviews\":[],\"status\":\"ACTIVE\",\"image\":[],\"createdAt\":\"2021-07-24T03:07:46.154Z\",\"__v\":0}]}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:3000/api/product/add",
+					"request": {
+						"url": "http://localhost:3000/api/product/add",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\" : \"SanDisk Ultra 128GB SDXC UHS-I Memory Card up to 80MB/s\",\r\n        \"price\" : \"45.89\",\r\n        \"description\" : \"Ultra-fast cards (2) to take better pictures and Full HD videos (1) with your compact to mid-range point-and-shoot cameras and camcorders. With SanDisk Ultra SDXC UHS-I cards you’ll benefit from faster downloads, high capacity, and better performance to capture and store 128GB (5) of high quality pictures and Full HD video (1). Take advantage of ultra-fast read speeds of up to 80MB/s (3) to save time moving photos and videos from the card to your computer. From a leader in flash memory storage, SanDisk Ultra SDXC UHS-I cards are compatible with SDHC and SDXC digital devices, and come with a 10-year limited warranty (6).\",\r\n        \"ratings\" : 4.5,\r\n        \"images\" : [{\r\n            \"public_id\" : \"products/dsvbpny402gelwugv2le\",\r\n            \"url\" : \"https://res.cloudinary.com/bookit/image/upload/v1608062030/products/dsvbpny402gelwugv2le.jpg\"\r\n        }],\r\n        \"category\" : \"Electronics\",\r\n        \"seller\" : \"Ebay\",\r\n        \"stock\" : 50,\r\n        \"numOfReviews\" : 32,\r\n        \"reviews\": [],\r\n        \"status\": \"ACTIVE\"\r\n }"
+						},
+						"description": "add one product"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/product/60fb840291fe7409e8092159",
+					"request": {
+						"url": "http://localhost:3000/api/product/60fb840291fe7409e8092159",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "get one product by id\n"
+					},
+					"response": [
+						{
+							"id": "69b3a2cb-666b-412f-902e-a7fe6e8c05b2",
+							"name": "http://localhost:3000/api/product/60fb840291fe7409e8092159",
+							"originalRequest": {
+								"url": "http://localhost:3000/api/product/60fb840291fe7409e8092159",
+								"method": "GET",
+								"header": [],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "connection",
+									"key": "connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "926",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Sat, 24 Jul 2021 22:41:54 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"39e-PXaEMJVPgFfeV+33qJ+bN2KmrX0\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "keep-alive",
+									"key": "keep-alive",
+									"value": "timeout=5",
+									"description": "Custom header"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "Express",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 559,
+							"body": "{\"product\":{\"price\":45.89,\"ratings\":4.5,\"stock\":50,\"numOfRevews\":0,\"_id\":\"60fb840291fe7409e8092159\",\"name\":\"SanDisk Ultra 128GB SDXC UHS-I Memory Card up to 80MB/s\",\"description\":\"Ultra-fast cards (2) to take better pictures and Full HD videos (1) with your compact to mid-range point-and-shoot cameras and camcorders. With SanDisk Ultra SDXC UHS-I cards you’ll benefit from faster downloads, high capacity, and better performance to capture and store 128GB (5) of high quality pictures and Full HD video (1). Take advantage of ultra-fast read speeds of up to 80MB/s (3) to save time moving photos and videos from the card to your computer. From a leader in flash memory storage, SanDisk Ultra SDXC UHS-I cards are compatible with SDHC and SDXC digital devices, and come with a 10-year limited warranty (6).\",\"category\":\"Electronics\",\"reviews\":[],\"status\":\"ACTIVE\",\"image\":[],\"createdAt\":\"2021-07-24T03:07:46.140Z\",\"__v\":0}}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:3000/api/product/60fb840291fe7409e8092159/update",
+					"request": {
+						"url": "http://localhost:3000/api/product/60fb840291fe7409e8092159/update",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"price\": 50.89,\n        \"ratings\": 4.5,\n        \"stock\": 50,\n        \"numOfRevews\": 0,\n        \"_id\": \"60fb840291fe7409e8092159\",\n        \"name\": \"SanDisk Ultra 128GB SDXC UHS-I Memory Card up to 80MB/s\",\n        \"description\": \"Ultra-fast cards (2) to take better pictures and Full HD videos (1) with your compact to mid-range point-and-shoot cameras and camcorders. With SanDisk Ultra SDXC UHS-I cards you’ll benefit from faster downloads, high capacity, and better performance to capture and store 128GB (5) of high quality pictures and Full HD video (1). Take advantage of ultra-fast read speeds of up to 80MB/s (3) to save time moving photos and videos from the card to your computer. From a leader in flash memory storage, SanDisk Ultra SDXC UHS-I cards are compatible with SDHC and SDXC digital devices, and come with a 10-year limited warranty (6).\",\n        \"category\": \"Electronics\",\n        \"reviews\": [],\n        \"status\": \"ACTIVE\",\n        \"image\": [],\n        \"createdAt\": \"2021-07-24T03:07:46.140Z\",\n        \"__v\": 0\n    }"
+						},
+						"description": "update product"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/product/60fb840291fe7409e8092159/delete",
+					"request": {
+						"url": "http://localhost:3000/api/product/60fb840291fe7409e8092159/delete",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": "delete one product"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authorization",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:3000/api/auth/signup",
+					"request": {
+						"url": "http://localhost:3000/api/auth/signup",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"cristian\",\n\t\"lastName\": \"yoel\",\n\t\"userName\": \"yoel12\",\n\t\"email\":\"crisyg@gmail.com\",\n\t\"password\":\"1234\",\n\t\"avatar\": \"\",\n\t\"roles\": [\"6109ce6c5f6bc50868d2ffd7\"]\n}"
+						},
+						"description": "signup new user with token jwt"
+					},
+					"response": [
+						{
+							"id": "41a914d6-24c4-4313-8667-e44c19a8c118",
+							"name": "http://localhost:3000/api/auth/signup",
+							"originalRequest": {
+								"url": "http://localhost:3000/api/auth/signup",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"firstName\": \"cristian\",\n\t\"lastName\": \"yoel\",\n\t\"userName\": \"yoel12\",\n\t\"email\":\"crisyg@gmail.com\",\n\t\"password\":\"1234\",\n\t\"avatar\": \"\",\n\t\"roles\": [\"6109ce6c5f6bc50868d2ffd7\"]\n}"
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-headers",
+									"key": "access-control-allow-headers",
+									"value": "Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"name": "access-control-allow-methods",
+									"key": "access-control-allow-methods",
+									"value": "GET, POST, OPTIONS, PUT, DELETE",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "allow",
+									"key": "allow",
+									"value": "GET, POST, OPTIONS, PUT, DELETE",
+									"description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+								},
+								{
+									"name": "connection",
+									"key": "connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "183",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Thu, 05 Aug 2021 01:15:22 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"b7-CVSgdO4POW1ltZG/0zKVybbhLJ8\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "keep-alive",
+									"key": "keep-alive",
+									"value": "timeout=5",
+									"description": "Custom header"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "Express",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 729,
+							"body": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGIzYmFhN2RkYzEyMmMwODBmZDY2ZiIsImlhdCI6MTYyODEyNjEyMiwiZXhwIjoxNjI4MjEyNTIyfQ.vZpmlUDFEkyQZfE7SgH5EpW8HhlbEjSjczqdvWb6Khs\"}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:3000/api/auth/signin",
+					"request": {
+						"url": "http://localhost:3000/api/auth/signin",
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGIzYmFhN2RkYzEyMmMwODBmZDY2ZiIsImlhdCI6MTYyODEyNjEyMiwiZXhwIjoxNjI4MjEyNTIyfQ.vZpmlUDFEkyQZfE7SgH5EpW8HhlbEjSjczqdvWb6Khs",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "signin user with token jwt"
+					},
+					"response": [
+						{
+							"id": "24a7f704-5492-4360-9c43-c68849b86b36",
+							"name": "http://localhost:3000/api/auth/signin",
+							"originalRequest": {
+								"url": "http://localhost:3000/api/auth/signin",
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Access-Token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGIzYmFhN2RkYzEyMmMwODBmZDY2ZiIsImlhdCI6MTYyODEyNjEyMiwiZXhwIjoxNjI4MjEyNTIyfQ.vZpmlUDFEkyQZfE7SgH5EpW8HhlbEjSjczqdvWb6Khs",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"crisyg@gmail.com\",\n\t\"password\": \"1234\"\n}\n"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-headers",
+									"key": "access-control-allow-headers",
+									"value": "Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"name": "access-control-allow-methods",
+									"key": "access-control-allow-methods",
+									"value": "GET, POST, OPTIONS, PUT, DELETE",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "allow",
+									"key": "allow",
+									"value": "GET, POST, OPTIONS, PUT, DELETE",
+									"description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+								},
+								{
+									"name": "connection",
+									"key": "connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "183",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Thu, 05 Aug 2021 23:35:33 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"b7-IMSpECwzf2yazFrJ1xnxY0vwXbQ\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "keep-alive",
+									"key": "keep-alive",
+									"value": "timeout=5",
+									"description": "Custom header"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "Express",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 859,
+							"body": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGIzYmFhN2RkYzEyMmMwODBmZDY2ZiIsImlhdCI6MTYyODIwNjUzMywiZXhwIjoxNjI4MjkyOTMzfQ.EuubHrngF-qL4FxsaMgc8IoTVLGB886PYRBg8_Ks0tg\"}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
