@@ -19,9 +19,11 @@ dotenv.config({ path: 'backend/config/config.env' });
 //routes
 const product = require('./routes/product');
 const auth = require('./routes/auth');
+const category = require('./routes/category');
 
 app.use('/api/product', product);
 app.use('/api/auth', auth);
+app.use('/api/category', category);
 
 //database connection
 const mongodb_connect = require('./database');

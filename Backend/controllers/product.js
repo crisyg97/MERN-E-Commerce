@@ -23,7 +23,7 @@ ctrl.create = async (req, res, next) => {
         numOfRevews: body.numOfRevews,
         reviews: body.reviews
     });
-    newProduct.save((err,product) => {
+    await newProduct.save((err,product) => {
         if(err) {res.status(400).json(err)}
         if(product) {res.status(200).json(product)}
     })
