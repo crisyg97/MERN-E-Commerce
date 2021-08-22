@@ -1,10 +1,14 @@
+const dotenv = require('dotenv').config();
+const jwt = require('jsonwebtoken');
 
 const userModel = require('../models/user');
 const roleModel = require('../models/role');
 const index = {};
 
 index.isModerator = async (res,req,next) => {
-    const user =  await userModel.findById(req.id);
+    const token = req.headers['x-access-token'];
+    const decode = jwt.verify(token, process.env.JWT_SECRET);
+    const userFound =  await userModel.findById(decode.id);
     const roles = await roleModel.find({ _id: {$in : user.roles } });
 
     for(let i=0; i < roles.length; i++){
@@ -17,14 +21,23 @@ index.isModerator = async (res,req,next) => {
 };
 
 index.isAdmin = async (res,req,next) => {
-    const user =  await userModel.findById(req.id);
-    const roles = await roleModel.find({ _id: {$in : user.roles } });
-
-    for(let i =0; i < roles.length; i++){
-        if(roles[i].name === "admin"){
-            next();
-            return;
+    try{
+        console.log(req.userId);
+        const userFound =  await userModel.findById(req.userId, (err) => {
+            if(err)
+                console.log(err);
+        });
+        const roles = await roleModel.find({ _id: {$in : userFound.roles } });
+        console.log(roles);
+        for(let i =0; i < roles.length; i++){
+            if(roles[i].name === "admin"){
+                next();
+                return;
+            }
         }
+    }catch(err){
+        console.log(err);
+        return res.status(400).json({message: 'unauthorized'});
     }
     return res.status(403).json({message: "required role admin"})
 }
