@@ -6,11 +6,13 @@ const roleModel = require('../models/role');
 const index = {};
 
 index.isModerator = async (res,req,next) => {
-    const token = req.headers['x-access-token'];
-    const decode = jwt.verify(token, process.env.JWT_SECRET);
-    const userFound =  await userModel.findById(decode.id);
-    const roles = await roleModel.find({ _id: {$in : user.roles } });
-
+    console.log(req.userId);
+    const userFound =  await userModel.findById(req.userId, (err) => {
+        if(err)
+            console.log(err);
+    });
+    const roles = await roleModel.find({ _id: {$in : userFound.roles } });
+    console.log(roles);
     for(let i=0; i < roles.length; i++){
         if(roles[i].name === "moderator"){
             next();

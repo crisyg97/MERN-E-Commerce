@@ -6,7 +6,7 @@ const index = {};
 
 index.verifyToken = async (req,res,next) => {
     try{
-        const token = req.headers['authorization'];
+        const token = req.headers.authorization;
         //token exist?
         if(!token){
             return res.status(400).json({message: 'no token provided'});
@@ -18,7 +18,6 @@ index.verifyToken = async (req,res,next) => {
         if(!userFound){
             return res.status(400).json({message: 'no user found'});
         }
-        req.token = token;
         next();
     }catch(err){
         console.log(err);
