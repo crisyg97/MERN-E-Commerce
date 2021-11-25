@@ -1,10 +1,13 @@
 const cartModel = require('../models/cart');
 const ctrl = {};
 
-ctrl.addItemToCart = async (req, res) => {
+ctrl.addItemToCart = async (req, res, next) => {
     const body = req.body;
-    await cartModel.find({user: body.user._id}, async (err, cart) => {
-            if(err) {res.status(400).json({err})}
+    console.log(body);
+    await cartModel.findOne({user: req.userId}, async (err, cart) => {
+            if(err) {
+                
+                res.status(400).json({err})}
             if(cart) {
                 //if cart already exists then update cart by quantity 
                 //res.status(200).json({message: cart});
@@ -13,40 +16,33 @@ ctrl.addItemToCart = async (req, res) => {
                 const product = body.cartItems.product;
                 const item = cart.cartItems.find(c => c.product == body.cartItems.product);
                 //add product quantity already exists in the cart
+                let condition, update;
                 if(item) {
-                    await cartModel.findOneAndUpdate({"user": body.user._id, "cartItems.product": product },{
-                        "$set": {
-                            "cartItems": {
-                                ...body.cartItems,
-                                quantity: item.quantity + body.carItems.quantity
-                            }
-                        }
-                    },
-                    (err,_cart) => { 
-                        if(err) {res.status(400).json({message: err})}
-                        if(_cart){
-                            return res.status(200).json({message: _cart})
-                        }
-                    });
-                }
-                await cartModel.findOneAndUpdate({user: body.user._id},{
-                    "$push": {
+                    condition = {"user": req.userId, "cartItems.product": product }
+                    update = {"$set": {
+                            "cartItems.$": body.cartItems
+                        }}        
+                }else{
+                    condition = {user: req.userId};
+                    update = {"$push": {
                         "cartItems": req.body.cartItems
+                        }}
                     }
-                },
-                (err,_cart) => { 
+
+                await cartModel.findOneAndUpdate(condition, update, (err,_cart) => { 
                     if(err) {res.status(400).json({message: err})}
                     if(_cart){
                         return res.status(200).json({message: _cart})
                     }
                 });
-                
 
             }else{
+                console.log(req.userId);
+                console.log(body.cartItems);
                 //if not exists create new cart
                 const newCart = new cartModel({
-                    user: body.user._id,
-                    cartItems: body.carItems
+                    user: req.userId,
+                    cartItems: body.cartItems
                 });
                 await newCart.save((err, cart) => {
                     if(err) {res.status(400).json({message: err})}
@@ -55,5 +51,4 @@ ctrl.addItemToCart = async (req, res) => {
             }
         });
 };
-
 module.exports = ctrl;

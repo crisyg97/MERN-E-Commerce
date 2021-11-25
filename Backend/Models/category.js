@@ -12,6 +12,7 @@ var categorySchema = new Schema({
         required: true,
         unique: true
     },
+    categoryImg: { type: String },
     parentId: {
         type: String,
     }

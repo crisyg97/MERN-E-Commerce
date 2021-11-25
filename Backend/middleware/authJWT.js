@@ -14,11 +14,12 @@ index.verifyToken = async (req,res,next) => {
         //token validation
         const decode = jwt.verify(token, process.env.JWT_SECRET);
         req.userId = decode.id;
+        console.log(req.userId);
         const userFound = await userModel.findById(decode.id, {password: 0});
         if(!userFound){
             return res.status(400).json({message: 'no user found'});
         }
-        next();
+        return next();
     }catch(err){
         console.log(err);
         return res.status(400).json({message: 'unauthorized'});
