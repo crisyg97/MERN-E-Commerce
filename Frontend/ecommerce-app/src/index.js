@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {} from 'react-redux';
+import store from './store';
+
+window.store = store;
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}> 
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>, //permite que el store de redux este disponible para todos los componentes
   document.getElementById('root')
 );
 
